@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <!-- Basic SEO tags -->
+    <meta name="description" content="Generate beautifully simple QR codes instantly.">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>QR Code Generator</h1>
+            <p>Enter text or a URL to generate a QR code</p>
+        </header>
+        
+        <main>
+            <form id="qr-form">
+                <div class="input-group">
+                    <input type="text" id="text-input" placeholder="e.g., https://example.com" required autocomplete="off">
+                </div>
+                <button type="submit" id="generate-btn">Generate QR Code</button>
+            </form>
+
+            <div class="result-container" id="result-container" hidden>
+                <div class="qr-wrapper">
+                    <img id="qr-image" alt="Generated QR Code">
+                </div>
+                <div class="actions">
+                    <a id="download-btn" class="btn-secondary" download="qrcode.png">Download</a>
+                </div>
+            </div>
+            
+            <div id="loading" class="loading" hidden>
+                <div class="spinner"></div>
+                <p>Generating...</p>
+            </div>
+            
+            <div id="error-message" class="error-message" hidden></div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

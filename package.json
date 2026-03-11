@@ -1,0 +1,14 @@
+{
+  "name": "qr-code-generator",
+  "version": "1.0.0",
+  "description": "A simple QR code generator web app ready for Railway deployment",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "qrcode": "^1.5.3"
+  }
+}
