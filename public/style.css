@@ -261,3 +261,39 @@ input:focus {
 [hidden] {
     display: none !important;
 }
+
+/* Ad Space Styling */
+.ad-space {
+    width: 100%;
+    min-height: 90px; /* Standard mobile leaderboard height */
+    background: rgba(15, 23, 42, 0.3);
+    border: 1px dashed rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.ad-content {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .ad-space {
+        min-height: 150px; /* Slightly taller for desktop ads */
+    }
+}
