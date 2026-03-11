@@ -41,6 +41,30 @@ body {
     background: radial-gradient(circle at center, #0a0b1e 0%, #050511 100%);
 }
 
+.bg-brand-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15vw; /* Responsive huge text */
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.03);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    z-index: 0;
+    user-select: none;
+}
+
+@media (max-width: 768px) {
+    .bg-brand-text {
+        font-size: 20vw;
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.04);
+        transform: translate(-50%, -50%) rotate(-10deg);
+    }
+}
+
 .gradient-blob {
     position: absolute;
     filter: blur(120px);
