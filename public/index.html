@@ -8,40 +8,48 @@
     <meta name="description" content="Generate beautifully simple QR codes instantly.">
     
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>QR Code Generator</h1>
-            <p>Enter text or a URL to generate a QR code</p>
+    <!-- The Dynamic Background Blobs -->
+    <div class="background-gradients">
+        <div class="gradient-blob form-blob"></div>
+        <div class="gradient-blob result-blob"></div>
+    </div>
+
+    <!-- The Main Container -->
+    <main class="container">
+        <!-- Text Gradients Examples -->
+        <header class="hero fade-in-up">
+            <h1><span class="text-gradient">QR Code Generator</span></h1>
+            <p>Enter text or a URL to generate a dynamic code.</p>
         </header>
-        
-        <main>
-            <form id="qr-form">
-                <div class="input-group">
-                    <input type="text" id="text-input" placeholder="e.g., https://example.com" required autocomplete="off">
-                </div>
-                <button type="submit" id="generate-btn">Generate QR Code</button>
+
+        <!-- Glassmorphism Card -->
+        <section class="glass-card fade-in-up delay-1">
+            <form id="qr-form" style="display: flex; flex-direction: column;">
+                <input type="text" id="text-input" placeholder="e.g., https://example.com" required autocomplete="off">
+                <button type="submit" id="generate-btn" class="primary-btn">Generate QR Code</button>
             </form>
 
-            <div class="result-container" id="result-container" hidden>
-                <div class="qr-wrapper">
-                    <img id="qr-image" alt="Generated QR Code">
-                </div>
-                <div class="actions">
-                    <a id="download-btn" class="btn-secondary" download="qrcode.png">Download</a>
-                </div>
-            </div>
-            
+            <!-- Status and Results -->
             <div id="loading" class="loading" hidden>
                 <div class="spinner"></div>
                 <p>Generating...</p>
             </div>
             
             <div id="error-message" class="error-message" hidden></div>
-        </main>
-    </div>
+
+            <div class="result-container" id="result-container" hidden>
+                <div class="qr-wrapper">
+                    <img id="qr-image" alt="Generated QR Code">
+                </div>
+                <div class="actions">
+                    <a id="download-btn" class="primary-btn" download="qrcode.png">Download</a>
+                </div>
+            </div>
+        </section>
+    </main>
     
     <script src="script.js"></script>
 </body>
