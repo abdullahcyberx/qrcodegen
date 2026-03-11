@@ -12,10 +12,14 @@
 </head>
 <body>
 
-    <!-- The Main Container -->
+    <!-- Subtle Animated Background -->
+    <div class="background-fx">
+        <!-- Animated Brand Background Text -->
+        <div class="bg-brand-text">SHEHZADA</div>
+    </div>
     <main class="container">
         <!-- Text Gradients Examples -->
-        <header class="hero fade-in-up">
+        <header class="hero">
             <h1>QR Code Generator</h1>
             <p>Enter text or a URL to generate a dynamic code.</p>
         </header>
@@ -23,7 +27,7 @@
 
 
         <!-- Minimalist Professional Card -->
-        <section class="pro-card fade-in-up delay-2">
+        <section class="pro-card">
             <form id="qr-form" style="display: flex; flex-direction: column;">
                 <input type="text" id="text-input" placeholder="e.g., https://example.com" required autocomplete="off">
                 <button type="submit" id="generate-btn" class="primary-btn">Generate QR Code</button>
@@ -42,7 +46,7 @@
                     <img id="qr-image" alt="Generated QR Code">
                 </div>
                 <div class="actions">
-                    <a id="download-btn" class="primary-btn" download="qrcode.png">Download</a>
+                    <a id="download-btn" class="primary-btn download-btn" download="qrcode.png">Download QR Code</a>
                 </div>
             </div>
             
