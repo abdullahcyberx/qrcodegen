@@ -38,7 +38,12 @@ app.post('/generate', async (req, res) => {
     }
 });
 
-// Start the server
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+// Export the app for Vercel deployment
+module.exports = app;
+
+// Start the server locally if not running in a serverless environment
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`Server is running on port ${PORT}`);
+    });
+}
